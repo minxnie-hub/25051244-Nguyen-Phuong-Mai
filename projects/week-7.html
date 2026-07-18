@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tự động hóa quy trình bằng Zapier">
+  <meta name="theme-color" content="#fff8f2">
+  <title>Tự động hóa quy trình bằng Zapier · Nguyễn Phương Mai · Portfolio CNS & AI</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script defer src="../assets/js/main.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient ambient-a" aria-hidden="true"></div><div class="ambient ambient-b" aria-hidden="true"></div>
+  <div class="page-shell">
+    
+<nav class="site-nav" aria-label="Điều hướng chính">
+  <a class="brand" href="../index.html" aria-label="Trang chủ Nguyễn Phương Mai">
+    <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+    <span>NPM<span class="brand-dot">.</span></span>
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+  <div class="nav-links" id="nav-links">
+    <a href="../about.html">Giới thiệu</a>
+    <a href="../projects.html">Dự án</a>
+    <a href="../reflection.html">Tổng kết</a>
+    <a href="../contact.html">Liên hệ</a>
+  </div>
+</nav>
+    <main id="main">
+    <section class="project-detail-hero" style="--project-accent:#F2C7D8">
+      <div class="reveal"><a class="breadcrumb" href="../projects.html">Dự án / Bài 7</a><span class="eyebrow">Week 07 · Automation</span><h1>Tự động hóa quy trình bằng Zapier</h1><p>Nguyễn Phương Mai · 25051244 · Kinh tế quốc tế</p></div>
+      <div class="project-hero-number reveal">07<svg viewBox="0 0 240 110" aria-hidden="true"><path d="M4 90 C42 70 58 95 92 52 S155 22 181 49 S218 35 235 8"/></svg></div>
+    </section>
+    <div class="report-layout">
+      <aside class="report-aside"><span class="eyebrow">Mục lục</span><nav class="toc"></nav><a class="source-download" href="../assets/docs/Bai-7-Tu-dong-hoa-Zapier.pdf" download>Tải file gốc <span>↓</span></a></aside>
+      <article class="report-content"><section class="report-section reveal"><span class="section-no">01</span><h2>Mục tiêu và tình huống</h2><p>Bài tập xây dựng một quy trình tự động gửi email chào mừng khi thành viên mới đăng ký câu lạc bộ. Dữ liệu đi theo chuỗi: <strong>Google Form → Google Sheets → Zapier → Gmail → người đăng ký nhận thư.</strong></p></section><section class="report-section reveal"><span class="section-no">02</span><h2>Công cụ sử dụng</h2><ul class="clean-list"><li>Google Forms để thu thập họ tên, email, mã sinh viên, khoa/lớp và lý do tham gia.</li><li>Google Sheets để lưu câu trả lời.</li><li>Zapier để phát hiện dữ liệu mới và điều phối hành động.</li><li>Gmail để gửi thư chào mừng cá nhân hóa.</li></ul></section><section class="report-section reveal"><span class="section-no">03</span><h2>Bước 1 · Tạo Google Form</h2><p>Biểu mẫu đăng ký được thiết kế với các trường thông tin cơ bản và liên kết trực tiếp với Google Sheets.</p><figure class="evidence reveal"><button class="image-open" type="button" data-full="../assets/images/week-7/image1.webp" data-caption="Hình 1. Google Form đăng ký thành viên câu lạc bộ"><img loading="lazy" src="../assets/images/week-7/image1.webp" alt="Hình 1. Google Form đăng ký thành viên câu lạc bộ"></button><figcaption>Hình 1. Google Form đăng ký thành viên câu lạc bộ</figcaption></figure></section><section class="report-section reveal"><span class="section-no">04</span><h2>Bước 2 · Tạo dữ liệu thử nghiệm</h2><p>Một lượt đăng ký thử được gửi với tên Nguyễn Mai Phương và địa chỉ 25051244@vnu.edu.vn. Sau khi gửi, dữ liệu xuất hiện thành một dòng mới trong bảng tính.</p><figure class="evidence reveal"><button class="image-open" type="button" data-full="../assets/images/week-7/image2.webp" data-caption="Hình 2. Dữ liệu đăng ký được ghi vào Google Sheets"><img loading="lazy" src="../assets/images/week-7/image2.webp" alt="Hình 2. Dữ liệu đăng ký được ghi vào Google Sheets"></button><figcaption>Hình 2. Dữ liệu đăng ký được ghi vào Google Sheets</figcaption></figure></section><section class="report-section reveal"><span class="section-no">05</span><h2>Bước 3 · Tạo Zap</h2><p>Zap gồm hai bước: Trigger “New Spreadsheet Row” trên Google Sheets và Action “Send Email” trên Gmail.</p><figure class="evidence reveal"><button class="image-open" type="button" data-full="../assets/images/week-7/image3.webp" data-caption="Hình 3. Sơ đồ Trigger và Action trong Zapier"><img loading="lazy" src="../assets/images/week-7/image3.webp" alt="Hình 3. Sơ đồ Trigger và Action trong Zapier"></button><figcaption>Hình 3. Sơ đồ Trigger và Action trong Zapier</figcaption></figure></section><section class="report-section reveal"><span class="section-no">06</span><h2>Bước 4 · Cấu hình Trigger</h2><p>Sau khi kết nối tài khoản Google, tôi chọn đúng bảng tính và trang tính nhận dữ liệu từ Form. Zapier đọc được bản ghi mẫu có họ tên, email, mã sinh viên và khoa/ngành.</p><figure class="evidence reveal"><button class="image-open" type="button" data-full="../assets/images/week-7/image4.webp" data-caption="Hình 4. Zapier kiểm tra bản ghi Spreadsheet Row mẫu"><img loading="lazy" src="../assets/images/week-7/image4.webp" alt="Hình 4. Zapier kiểm tra bản ghi Spreadsheet Row mẫu"></button><figcaption>Hình 4. Zapier kiểm tra bản ghi Spreadsheet Row mẫu</figcaption></figure></section><section class="report-section reveal"><span class="section-no">07</span><h2>Bước 5 · Cấu hình email</h2><p>Trường To lấy tự động từ cột email; CC và BCC để trống; From Name là Ban Chủ nhiệm Câu lạc bộ; tiêu đề là “Chào mừng bạn đến với Câu lạc bộ!”. Nội dung thư chèn họ tên người đăng ký và thông báo về các hoạt động sắp tới.</p><figure class="evidence reveal"><button class="image-open" type="button" data-full="../assets/images/week-7/image5.webp" data-caption="Hình 5. Thiết lập nội dung email chào mừng trong Gmail Action"><img loading="lazy" src="../assets/images/week-7/image5.webp" alt="Hình 5. Thiết lập nội dung email chào mừng trong Gmail Action"></button><figcaption>Hình 5. Thiết lập nội dung email chào mừng trong Gmail Action</figcaption></figure></section><section class="report-section reveal"><span class="section-no">08</span><h2>Bước 6 · Kiểm tra và Publish</h2><p>Kiểm tra cho thấy Zapier đọc đúng dữ liệu, điền đúng người nhận, cá nhân hóa họ tên và gửi đủ tiêu đề/nội dung. Sau đó Zap được Publish để tự chạy khi có dòng mới.</p><figure class="evidence reveal"><button class="image-open" type="button" data-full="../assets/images/week-7/image6.webp" data-caption="Hình 6. Zap được Publish và ở trạng thái hoạt động"><img loading="lazy" src="../assets/images/week-7/image6.webp" alt="Hình 6. Zap được Publish và ở trạng thái hoạt động"></button><figcaption>Hình 6. Zap được Publish và ở trạng thái hoạt động</figcaption></figure></section><section class="report-section reveal"><span class="section-no">09</span><h2>Kết quả đạt được</h2><ul class="clean-list"><li>Nhận thông tin đăng ký qua Google Form.</li><li>Lưu dữ liệu vào Google Sheets.</li><li>Phát hiện thành viên mới bằng Trigger.</li><li>Gửi email qua Gmail mà không cần thao tác thủ công.</li><li>Cá nhân hóa thư theo họ tên từng người.</li></ul></section><section class="report-section reveal"><span class="section-no">10</span><h2>Lợi ích và ý tưởng mở rộng</h2><p>Quy trình giảm thao tác lặp lại, hạn chế bỏ sót, phản hồi nhanh và tạo hình ảnh chuyên nghiệp cho câu lạc bộ.</p><h3>Hai ý tưởng tiếp theo</h3><ul class="clean-list"><li>Tự động thông báo cho Ban Chủ nhiệm khi có thành viên mới.</li><li>Tự động gửi email nhắc lịch trước buổi sinh hoạt hoặc sự kiện.</li></ul></section><section class="report-section reveal"><span class="section-no">11</span><h2>Khó khăn và cách xử lý</h2><ul class="clean-list"><li>Chọn đúng bảng tính và worksheet.</li><li>Tạo bản ghi mẫu trước khi test Trigger.</li><li>Ánh xạ đúng cột email vào trường To.</li><li>Kiểm tra kỹ nội dung trước khi Publish.</li><li>Để trống các trường không sử dụng như CC, BCC và tệp đính kèm.</li></ul></section><section class="report-section reveal"><span class="section-no">12</span><h2>Kết luận</h2><p>Bài tập giúp tôi hiểu nguyên tắc Trigger—Action và cách các ứng dụng trao đổi dữ liệu mà không cần viết mã. Từ một quy trình nhỏ, có thể mở rộng tự động hóa sang nhiều hoạt động học tập và quản lý thực tế.</p></section></article>
+    </div>
+    <nav class="project-pagination"><a href="week-6.html"><span>← Bài trước</span><b>Sử dụng AI có trách nhiệm trong học thuật</b></a><a href="week-1.html"><span>Bài tiếp →</span><b>Thao tác cơ bản với tệp tin và thư mục</b></a></nav>
+    </main>
+    
+<footer class="site-footer">
+  <div><span class="eyebrow">Portfolio học phần</span><h2>From soft ideas<br>to clear outcomes.</h2></div>
+  <div class="footer-meta"><p>Nguyễn Phương Mai · 25051244</p><p>Kinh tế quốc tế · Trường Đại học Kinh tế, ĐHQGHN</p><a href="mailto:mai21042007bhlc@gmail.com">mai21042007bhlc@gmail.com</a></div>
+  <a class="back-top" href="#top" aria-label="Lên đầu trang">↑</a>
+</footer>
+  </div>
+  <dialog class="lightbox" aria-label="Xem ảnh minh chứng"><button class="lightbox-close" aria-label="Đóng">×</button><img alt=""><p></p></dialog>
+</body>
+</html>
